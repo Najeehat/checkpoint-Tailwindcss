@@ -1,11 +1,599 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZeedahBlog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
-    
+
+<body class="bg-slate-50">
+  <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center ">
+      <span class="text-2xl font-[Poppins] cursor-pointer">
+        <img class="h-10 inline"
+          src="https://i.pinimg.com/564x/a7/b4/d3/a7b4d3a416317fcef89cdc3f74b3d170.jpg">
+         ZeedahBlog
+      </span>
+
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+      </span>
+    </div>
+
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl hover:text-cyan-500 duration-500">HOME</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl hover:text-cyan-500 duration-500">FEATURED ARTICLE</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl hover:text-cyan-500 duration-500">CATEGORY</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl hover:text-cyan-500 duration-500">RECENT POST</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl hover:text-cyan-500 duration-500">NEWSLETTER</a>
+      </li>
+
+      <button class="bg-cyan-400 text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded ">
+        Get started
+      </button>
+
+    </ul>
+  </nav>
+
+  <div class="container mx-auto px-4 lg:px-8">
+    <div class="flex justify-center items-center mt-24">
+      <div class="text-center max-w-3xl">
+        <span class="text-base font-semibold text-blue-700">OUR BLOG</span>
+        <h1 class="text-4xl lg:text-5xl text-gray-500 font-semibold mt-4">Stories and intervious</h1>
+        <p class="text-lg lg:text-xl text-gray-500 leading-7 mt-6">Subscribe to learn about new product feactures the latest technology, solutions and updates </p>
+        <div class="justify-center items-center mt-8 flex-col lg:flex lg:mt-10">
+          <form action="#" class="justify-center items-start md:flex">
+            <div class="flex-grow md:w-1/2">
+              <label for="email" class="sr-only">Email Address</label>
+              <input type="email" name="email" id="email" placeholder="Enter your email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+              <p class="text-gray-500 text-start text-sm mt-2">He care about your data in our <a href="#" class="underline">privaty policy</a></p>
+            </div>
+            <button type="submit" class="w-full md:w-auto px-4 py-3 bg-blue-700 text-white font-medium rounded-lg hover:lg-blue-800 focus:outline-none mt-4 md:ml-4 md:mt-0">Subscribe</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto px-4 mt-16 lg:mt-24">
+    <div class="text-3xl font-semibold mb-6"> Featured articles</div>
+    <div class="grid gap-6 md:grid-cols-2" >
+      <div>
+        <img src="https://i.pinimg.com/564x/aa/b8/55/aab8552b3b9c2422242710c65e9fc021.jpg" alt="blog" class="w-full h-56 object-cover">
+        <div class="space-y-3 mt-6">
+          <span class="text-sm text-blue-700 font-semibold">Olivia Rhye . 20 Jan 2024</span>
+          <a href="#" class="flex justify-between">
+            <h3 class="text-2xl  font-semibold">STOP MOVING TOWARDS THE UNKNOWN, SET YOURSELF GOALS!</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <p class="text-gray-500">Knowing what you want and expect from life requires real reflection.</p>
+        </div>
+        <div class="flex mt-6 space-x-2">
+          <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Research</span>
+          <span class="px-2 py-1 text-sm text-pink-700 font-medium bg-pink-50 rounded-full">Presentations</span>
+        </div>
+      </div>
+      <div>
+        <div class="pb-6 items-center lg:flex lg:space-x-4">
+          <img src="https://i.pinimg.com/564x/50/e6/bc/50e6bc733c4a003745cdf18ac262b6fd.jpg" alt="HOW TO HAVE BETTER SELF-ESTEEM AND YOUR ABILITIES?" class="w-full h-56 object-cover lg:w-1/2 lg:h-48">
+          <div class="mt-6 lg:mt-0">
+            <div class="space-y-3">
+              <span class="text-sm text-blue-700 font-semibold">Phoenix Baker . 19 Apr 2024</span>
+              <h3 class="text-2xl font-semibold lg:text-lg">HOW TO HAVE BETTER SELF-ESTEEM AND YOUR ABILITIES?</h3>
+              <p class="text-gray-500">Self-esteem corresponds to the value we place on our physique, our abilities, our personality, our intelligence... Everything that makes you the individual you are today.</p>
+            </div>
+            <div class="flex mt-6 space-x-2">
+              <span class="px-2 py-1 text-sm text-blue-700 font-medium bg-blue-50 rounded-full">Research</span>
+              <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Presentations</span>
+            </div>
+          </div>
+        </div>
+        <div class="items-center lg:flex lg:space-x-4">
+          <img src="https://i.pinimg.com/564x/40/f0/8b/40f08b15e761494fe8a3fd8e7a801c96.jpg" alt="FIND YOUR PRODUCTIVE PERSONALITY TYPE TO BE EFFECTIVE!" class="w-full h-56 object-cover lg:w-1/2 lg:h-48">
+          <div class="mt-6 lg:mt-0">
+            <div class="space-y-3">
+              <span class="text-sm text-blue-700 font-semibold">Lana Steiner . 12 Fev 2024</span>
+              <h3 class="text-2xl font-semibold lg:text-lg">FIND YOUR PRODUCTIVE PERSONALITY TYPE TO BE EFFECTIVE!</h3>
+              <p class="text-gray-500">Knowing the main traits of your personality is a major and unrivaled asset. Knowing yourself allows you to move forward with strength and confidence through the stages of life.</p>
+            </div>
+            <div class="flex mt-6 space-x-2">
+              <span class="px-2 py-1 text-sm text-blue-700 font-medium bg-blue-50 rounded-full">Research</span>
+              <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Presentations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+
+    <h1 class="text-5xl font-extrabold text-gray-900">
+      Differents Category
+    </h1>
+    <hr class="mt-5 w-1/4 mx-auto">
+    <p class="mt-5 text-xl text-black-800">
+      choose the best subscription according to your needs
+    </p>
+
+
+    <div class="mt-8 flex flex-wrap justify-center items-center flex-col space-x-0 md:space-x-10 md:flex-row">
+
+
+      <div class="bg-white flex flex-col min-h-card max-w-sm border border-gray-200 rounded-lg mt-5 text-left">
+
+        <div class="px-6 pt-6">
+          <h2 class="text-2xl font-bold text-gray-900 ">Personal development</h2>
+          <p class="text-md text-gray-800">
+            Meet your physical, mental and spiritual needs
+          </p>
+          <p class="mt-2">
+            <span class="text-4xl font-extrabold text-gray-900">12€</span>
+            <span class="font-medium text-black-800">/mois</span>
+          </p>
+          <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">
+            Inclu dans ce plan :
+          </h3>
+        </div>
+
+        <ul class="mt-6 px-6 flex flex-grow flex-shrink-0 flex-col">
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Awareness of your emotions,</span>
+          </li>
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Stress management, ommunication.</span>
+          </li>
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Self-esteem and self-confidence.</span>
+          </li>
+          <br>
+          <li class="flex space-x-3 py-2 mt-auto">
+            <a
+            href="#"
+            class=" block w-full bg-yellow-600 border border-yellow-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-yellow-900"
+            >Buy this plan</a>
+          </li>
+        </ul>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+  <div class="text-center max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+
+    <h1 class="text-5xl font-extrabold text-gray-900">
+      Differents Category
+    </h1>
+    <hr class="mt-5 w-1/4 mx-auto">
+    <p class="mt-5 text-xl text-black-800">
+      choose the best subscription according to your needs
+    </p>
+
+
+    <div class="mt-8 flex flex-wrap justify-center items-center flex-col space-x-0 md:space-x-10 md:flex-row">
+
+
+      <div class="bg-white flex flex-col min-h-card max-w-sm border border-gray-200 rounded-lg mt-5 text-left">
+
+        <div class="px-6 pt-6">
+          <h2 class="text-2xl font-bold text-gray-900 ">Personal development</h2>
+          <p class="text-md text-gray-800">
+            Meet your physical, mental and spiritual needs
+          </p>
+          <p class="mt-2">
+            <span class="text-4xl font-extrabold text-gray-900">12€</span>
+            <span class="font-medium text-black-800">/mois</span>
+          </p>
+          <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">
+            Inclu dans ce plan :
+          </h3>
+        </div>
+
+        <ul class="mt-6 px-6 flex flex-grow flex-shrink-0 flex-col">
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Awareness of your emotions,</span>
+          </li>
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Stress management, ommunication.</span>
+          </li>
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Self-esteem and self-confidence.</span>
+          </li>
+          <br>
+          <li class="flex space-x-3 py-2 mt-auto">
+            <a
+            href="#"
+            class=" block w-full bg-yellow-600 border border-yellow-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-yellow-900"
+            >Buy this plan</a>
+          </li>
+        </ul>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+  <div class="text-center max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+
+    <h1 class="text-5xl font-extrabold text-gray-900">
+      Differents Category
+    </h1>
+    <hr class="mt-5 w-1/4 mx-auto">
+    <p class="mt-5 text-xl text-black-800">
+      choose the best subscription according to your needs
+    </p>
+
+
+    <div class="mt-8 flex flex-wrap justify-center items-center flex-col space-x-0 md:space-x-10 md:flex-row">
+
+
+      <div class="bg-white flex flex-col min-h-card max-w-sm border border-gray-200 rounded-lg mt-5 text-left">
+
+        <div class="px-6 pt-6">
+          <h2 class="text-2xl font-bold text-gray-900 ">Personal development</h2>
+          <p class="text-md text-gray-800">
+            Meet your physical, mental and spiritual needs
+          </p>
+          <p class="mt-2">
+            <span class="text-4xl font-extrabold text-gray-900">12€</span>
+            <span class="font-medium text-black-800">/mois</span>
+          </p>
+          <h3 class="text-xs font-medium text-gray-900 tracking-wide uppercase">
+            Inclu dans ce plan :
+          </h3>
+        </div>
+
+        <ul class="mt-6 px-6 flex flex-grow flex-shrink-0 flex-col">
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Awareness of your emotions,</span>
+          </li>
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Stress management, ommunication.</span>
+          </li>
+          <li class="flex space-x-3 py-2">
+            <img 
+            src="D:\Users\hp\Downloads\checked.svg" 
+            alt="check icone" 
+            class="flex-shrink-0 h-5 w-5">
+            <span class="text-sm text-gray-800"
+            >Self-esteem and self-confidence.</span>
+          </li>
+          <br>
+          <li class="flex space-x-3 py-2 mt-auto">
+            <a
+            href="#"
+            class=" block w-full bg-yellow-600 border border-yellow-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-yellow-900"
+            >Buy this plan</a>
+          </li>
+        </ul>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+  <div class="container mx-auto px-4 mt-16 lg:mt-24">
+    <h2 class="text-3xl font-semibold mb-6">recent posts</h2>
+    <div class=" grid grid-cols-1 gap-6 mg:grid-cols-2 lg:grid-cols-3">
+      <div>
+        <img src="https://i.pinimg.com/564x/dd/78/b2/dd78b26b2ac4a272e872830cf22bba4e.jpg" alt="BEST PLACES TO WORK WITH FREEDOM AND PRODUCTIVITY! #2" class="w-full h-56 object-cover mb-4">
+        <div class="mt-6 lg:mt-0">
+          <div class="space-y-3">
+            <span class="text-sm text-blue-700 font-semibold">Alec Whitten . 17 Jan 2024</span>
+            <a href="#" class="flex justify-between">
+              <h3 class="text-2xl  font-semibold">BEST PLACES TO WORK WITH FREEDOM AND PRODUCTIVITY! #2</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <p class="text-gray-500">we want to give the best of our productivity to be able to achieve the objective that we have set for ourselves. But for this, we chose to escape the norms by creating our own workspace.</p>
+          </div>
+          <div class="flex mt-6 space-x-2">
+              <span class="px-2 py-1 text-sm text-blue-700 font-medium bg-blue-50 rounded-full">Research</span>
+              <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Presentations</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://i.pinimg.com/564x/1c/d6/06/1cd60632d5182b863cf80a1afe7dee84.jpg" alt="POSITIVE THINKING: TAKE BACK THE REINS OF YOUR HAPPINESS!" class="w-full h-56 object-cover mb-4">
+        <div class="mt-6 lg:mt-0">
+          <div class="space-y-3">
+            <span class="text-sm text-blue-700 font-semibold">Alec Whitten . 17 Jan 2024</span>
+            <a href="#" class="flex justify-between">
+              <h3 class="text-2xl  font-semibold">POSITIVE THINKING: TAKE BACK THE REINS OF YOUR HAPPINESS!</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <p class="text-gray-500">It's easy to quickly fall into your darkest thoughts and thoughts. A bad day, a difficult night, a boss that's a little too overwhelming, sluggish transportation, being away from a partner... In short, all the reasons are good!</p>
+          </div>
+          <div class="flex mt-6 space-x-2">
+              <span class="px-2 py-1 text-sm text-blue-700 font-medium bg-blue-50 rounded-full">Research</span>
+              <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Presentations</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://i.pinimg.com/564x/5c/ca/1c/5cca1cd411c006550752b186816fc1bf.jpg" alt="TO DO LIST: TRAPS AND ADVICE FOR GUARANTEED SUCCESS!" class="w-full h-56 object-cover mb-4">
+        <div class="mt-6 lg:mt-0">
+          <div class="space-y-3">
+            <span class="text-sm text-blue-700 font-semibold">Jonathan Carter . 17 Jan 2024</span>
+            <a href="#" class="flex justify-between">
+              <h3 class="text-2xl  font-semibold">TO DO LIST: TRAPS AND ADVICE FOR GUARANTEED SUCCESS!</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <p class="text-gray-500">Whether we are carrying out a project, about to go on vacation, preparing for the event of the season, organizing the next family meal, in the middle of revisions or approaching the back to school, we all have the same reflex: the To Do List.</p>
+          </div>
+          <div class="flex mt-6 space-x-2">
+              <span class="px-2 py-1 text-sm text-blue-700 font-medium bg-blue-50 rounded-full">Research</span>
+              <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Presentations</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://i.pinimg.com/736x/d4/4a/88/d44a88f4eee4af0275c4d607be193285.jpg" alt="DIGITAL DETOX: THE KEY TO YOUR PRODUCTIVITY SUCCESS!" class="w-full h-56 object-cover mb-4">
+        <div class="mt-6 lg:mt-0">
+          <div class="space-y-3">
+            <span class="text-sm text-blue-700 font-semibold">Mike Devis . 17 Jan 2023</span>
+            <a href="#" class="flex justify-between">
+              <h3 class="text-2xl  font-semibold">DIGITAL DETOX: THE KEY TO YOUR PRODUCTIVITY SUCCESS!</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <p class="text-gray-500">Known to the general public in France from 1995, it was not until 2000 that the Internet took off significantly in the lives of individuals and French businesses.</p>
+          </div>
+          <div class="flex mt-6 space-x-2">
+              <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Presentations</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://i.pinimg.com/564x/31/78/96/31789686b4acb6729f6d01f66256f531.jpg" alt="HOW TO EVALUATE YOUR MANAGERIAL SKILLS EFFECTIVELY" class="w-full h-56 object-cover mb-4">
+        <div class="mt-6 lg:mt-0">
+          <div class="space-y-3">
+            <span class="text-sm text-blue-700 font-semibold">Tom Devis . 17 fev 2023</span>
+            <a href="#" class="flex justify-between">
+              <h3 class="text-2xl  font-semibold">HOW TO EVALUATE YOUR MANAGERIAL SKILLS EFFECTIVELY</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <p class="text-gray-500">When you want to embark on the new adventure of entrepreneurship, it is necessary to take stock of your current skillset. Defining your strengths and achievements, as well as your weaknesses and areas for improvement, will allow you to prepare yourself before taking the plunge.</p>
+          </div>
+          <div class="flex mt-6 space-x-2">
+              <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Presentations</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://i.pinimg.com/564x/9b/35/5b/9b355b6dbd4a8ddb08668884f5d17d93.jpg" alt="IN THE QUEST FOR HAPPINESS! #REFLECTION" class="w-full h-56 object-cover mb-4">
+        <div class="mt-6 lg:mt-0">
+          <div class="space-y-3">
+            <span class="text-sm text-blue-700 font-semibold">camille True . 27 june 2022</span>
+            <a href="#" class="flex justify-between">
+              <h3 class="text-2xl  font-semibold">IN THE QUEST FOR HAPPINESS! #REFLECTION</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <p class="text-gray-500">Let's start with a riddle: What is the difference between being happy, happiness, pleasure and joy?
+
+              Happiness finds its source internally. The individual experiences a form of stable, permanent and unshakeable plenitude in the face of life's events.</p>
+          </div>
+          <div class="flex mt-6 space-x-2">
+              <span class="px-2 py-1 text-sm text-orange-700 font-medium bg-orange-50 rounded-full">Presentations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <div class="min-h-screen py-40" style="background-image: linear-gradient(115deg, #9F7AEA, #FEE2FE)">
+      <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto shadow-lg overflow-hidden">
+          <div class="w-full lg:w-1/2 flex flex-col items-center justify-center p-12 bg-no-repeat bg-cover bg-center z-20" style="background-image: url('https://i.pinimg.com/564x/e8/0d/9e/e80d9e7c72eb92afaad56fca3672565e.jpg');">
+            <h1 class="text-white text-3xl mb-3">Welcome</h1>
+            <div>
+              <p class="text-white">Join our newsletter to stay up to date with the latest news, special offers and exclusive tips! Don't miss this opportunity to stay informed! <a href="#" class="text-yellow-400 font-semibold">Learn more</a></p>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 py-16 px-12">
+            <h2  class="text-3xl mb-4">Newsletter</h2>
+            <p class="mb-4">
+              Create your account. It’s free and only take a minute
+            </p>
+            <form action="#">
+              <div class="grid grid-cols-2 gap-5">
+                <input type="text" placeholder="Firstname" class="border border-gray-400 py-1 px-2">
+                <input type="text" placeholder="Surname" class="border border-gray-400 py-1 px-2">
+              </div>
+              <div class="mt-5">
+                <input type="text" placeholder="Email" class="border border-gray-400 py-1 px-2 w-full">
+              </div>
+              <div class="mt-5">
+                <input type="password" placeholder="Password" class="border border-gray-400 py-1 px-2 w-full">
+              </div>
+              <div class="mt-5">
+                <input type="password" placeholder="Confirm Password" class="border border-gray-400 py-1 px-2 w-full">
+              </div>
+              <div class="mt-5">
+                <input type="checkbox" class="border border-gray-400">
+                <span>
+                  I accept the <a href="#" class="text-purple-500 font-semibold">Terms of Use</a> &  <a href="#" class="text-purple-500 font-semibold">Privacy Policy</a> 
+                </span>
+              </div>
+              <div class="mt-5">
+                <button class="w-full bg-purple-500 py-3 text-center text-white rounded-3xl">Register Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="border-t border-gray mt-16">
+  <div class="flex justify-between items-center pt-5 pb-24">
+    <a href="#" class="text-gray-600 font-medium flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+      Previous
+    </a>
+    <div class="flex space-x-2">
+      <a href="#" class="px-2 py-1 font-medium text-blue-700 bg-blue-50 rounded-lg">1</a>
+      <a href="#" class="px-2 py-1 font-medium text-blue-600">2</a>
+      <a href="#" class="px-2 py-1 font-medium text-blue-600">3</a>
+      <a href="#" class="px-2 py-1 font-medium text-blue-600">4</a>
+    </div>
+    <a href="#" class="text-gray-600 font-medium flex items-center gap-2">
+      Next
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+  </div>
+  <footer class="relative bg-gradient-to-bl from-gray-900 via-black to-sky-950 to-95% text-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-12">
+        <div class="col-span-12">
+          <div class="py-[60px] px-0">
+            <div class="grid md:grid-cols-12 grid-cols-1 gap-[30px]">
+              <div class="lg:col-span-4 md:col-span-12">
+                 <span class="text-2xl text-yellow-400 font-semibold flex justify-center lg:justify-start">ZeedahBlog</span>
+                 <p class="mt-6 text-gray-300 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias culpa ut perferendis dignissimos libero tempore iusto doloribus delectus obcaecati, ad porro dolore distinctio quod ipsum officiis nobis temporibus autem officia.</p>
+                 <ul class="list-none mt-6 text-center lg:text-justify">
+                  <li class="inline flex justify-around">
+                    <a href="" class="font-semibold tracking-wide align-middle transition duration-500 case-in-out p-1 h-9 w-9 inline-flex items-center text-center justify-center text-sm border border-blue-800 rounded-md hover:border-yellow-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" id="Facebook-Logo--Streamline-Ultimate.svg"><desc>Facebook Logo Streamline Icon: https://streamlinehq.com</desc><path d="M18.3778 7.2666C18.286 7.1621 18.1542 7.1016 18.0152 7.1H14.3206V5.7182C14.3206 5.4438 14.3794 5.1302 14.8204 5.1302H17.7604C17.8917 5.1388 18.0191 5.0842 18.1034 4.9832C18.1925 4.8954 18.242 4.7751 18.2406 4.65V0.73C18.2406 0.4594 18.0212 0.24 17.7506 0.24H13.5072C8.8032 0.24 8.4406 4.258 8.4406 5.483V7.1H5.9906C5.72 7.1 5.5006 7.3194 5.5006 7.59V11.51C5.5006 11.7806 5.72 12 5.9906 12H8.4406V23.27C8.4406 23.5406 8.66 23.76 8.9306 23.76H13.8306C14.1012 23.76 14.3206 23.5406 14.3206 23.27V12H17.6036C17.8562 12.0013 18.0683 11.8103 18.0936 11.559L18.4954 7.639C18.5134 7.5036 18.4703 7.3671 18.3778 7.2666Z" fill="#ffffff" stroke-width="1"></path></svg>
+                    </a>
+                    <a href="" class="font-semibold tracking-wide align-middle transition duration-500 case-in-out p-1 h-9 w-9 inline-flex items-center text-center justify-center text-sm border border-blue-800 rounded-md hover:border-yellow-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" id="Instagram-Logo--Streamline-Ultimate.svg"><desc>Instagram Logo Streamline Icon: https://streamlinehq.com</desc><g><path d="M18.5 0h-13A5.51 5.51 0 0 0 0 5.5v13A5.51 5.51 0 0 0 5.5 24h13a5.51 5.51 0 0 0 5.5 -5.5v-13A5.51 5.51 0 0 0 18.5 0ZM20 16a4 4 0 0 1 -4 4H8a4 4 0 0 1 -4 -4V8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4Z" fill="#ffffff" stroke-width="1"></path><path d="M8 12a4 4 0 1 0 8 0 4 4 0 1 0 -8 0" fill="#ffffff" stroke-width="1"></path><path d="M16 7a1 1 0 1 0 2 0 1 1 0 1 0 -2 0" fill="#ffffff" stroke-width="1"></path></g></svg>
+                    </a>
+                    <a href="" class="font-semibold tracking-wide align-middle transition duration-500 case-in-out p-1 h-9 w-9 inline-flex items-center text-center justify-center text-sm border border-blue-800 rounded-md hover:border-yellow-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" id="Twitter-Logo--Streamline-Ultimate.svg"><desc>Twitter Logo Streamline Icon: https://streamlinehq.com</desc><path d="M23.32 6.44a0.5 0.5 0 0 0 -0.2 -0.87l-0.79 -0.19A0.49 0.49 0 0 1 22 5.1a0.5 0.5 0 0 1 0 -0.43l0.45 -0.89a0.5 0.5 0 0 0 -0.59 -0.7l-2 0.56a0.48 0.48 0 0 1 -0.43 -0.09 5 5 0 0 0 -8 4v0.36a0.25 0.25 0 0 1 -0.22 0.25c-2.81 0.33 -5.5 -1.1 -8.4 -4.44a0.5 0.5 0 0 0 -0.51 -0.16A0.49 0.49 0 0 0 2 4a7.52 7.52 0 0 0 0.46 4.92 0.27 0.27 0 0 1 0 0.26 0.24 0.24 0 0 1 -0.25 0.1l-1.13 -0.22a0.52 0.52 0 0 0 -0.44 0.15 0.51 0.51 0 0 0 -0.13 0.44 5.15 5.15 0 0 0 2.37 3.78 0.25 0.25 0 0 1 0.12 0.23 0.24 0.24 0 0 1 -0.15 0.22l-0.54 0.21a0.53 0.53 0 0 0 -0.28 0.29 0.51 0.51 0 0 0 0 0.4 4.36 4.36 0 0 0 3.2 2.48 0.27 0.27 0 0 1 0.19 0.22 0.26 0.26 0 0 1 -0.15 0.26 11 11 0 0 1 -4.27 0.82 0.49 0.49 0 0 0 -0.2 1 19.92 19.92 0 0 0 8.14 1.93 12.6 12.6 0 0 0 7 -2A12.48 12.48 0 0 0 21.5 9.06v-0.87a0.49 0.49 0 0 1 0.18 -0.38Z" fill="#fbfbff" stroke-width="1"></path></svg>
+                    </a>
+                    <a href="" class="font-semibold tracking-wide align-middle transition duration-500 case-in-out p-1 h-9 w-9 inline-flex items-center text-center justify-center text-sm border border-blue-800 rounded-md hover:border-yellow-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" id="Github-Logo-1--Streamline-Ultimate.svg"><desc>Github Logo 1 Streamline Icon: https://streamlinehq.com</desc><path d="M12 0.28a12 12 0 0 0 -3.72 23.41l0.28 0a1 1 0 0 0 0.7 -0.24 1.05 1.05 0 0 0 0.36 -0.82v-0.21l0 -1.09a0.49 0.49 0 0 0 -0.19 -0.33 0.5 0.5 0 0 0 -0.41 -0.1c-2.69 0.58 -3.26 -1.1 -3.29 -1.21A4.64 4.64 0 0 0 4 17.5l-0.15 -0.11a0.73 0.73 0 0 1 0.38 -0.07 1.48 1.48 0 0 1 1.14 0.88 3 3 0 0 0 4 1.16 0.53 0.53 0 0 0 0.3 -0.36 2 2 0 0 1 0.56 -1.22 0.5 0.5 0 0 0 0.15 -0.53 0.49 0.49 0 0 0 -0.42 -0.35c-2.37 -0.27 -4.8 -1.1 -4.8 -5.19a4 4 0 0 1 1.06 -2.78 0.49 0.49 0 0 0 0.09 -0.52A3.56 3.56 0 0 1 6.32 6a5.57 5.57 0 0 1 2.52 1.15 0.48 0.48 0 0 0 0.42 0.06A10.66 10.66 0 0 1 12 6.85a10.31 10.31 0 0 1 2.75 0.36 0.46 0.46 0 0 0 0.41 -0.06A5.53 5.53 0 0 1 17.68 6a3.54 3.54 0 0 1 0 2.38 0.48 0.48 0 0 0 0.1 0.52 4 4 0 0 1 1.05 2.75c0 4.1 -2.43 4.92 -4.81 5.18a0.49 0.49 0 0 0 -0.42 0.35 0.49 0.49 0 0 0 0.15 0.52 2.23 2.23 0 0 1 0.61 1.75v3.18a1.06 1.06 0 0 0 0.37 0.82 1.18 1.18 0 0 0 1.06 0.19A12 12 0 0 0 12 0.28Z" fill="#ffffff" stroke-width="1"></path></svg>
+                    </a>
+                  </li>
+                 </ul>
+              </div>
+              <div class="lg:col-span-2 md:col-span-4 text-center lg:text-justify">
+                <h5 class="tracking-[8px] text-yellow-400 font-semibold">Quiks Link</h5>
+                <ul class="list-none mt-6">
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-gray-400 transition-all direction-500 ease-in-out">HOME</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-gray-400 transition-all direction-500 ease-in-out"> FEATURED ARTICLE</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-gray-400 transition-all direction-500 ease-in-out">CATEGORY</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-gray-400 transition-all direction-500 ease-in-out">RECENT POST</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-gray-400 transition-all direction-500 ease-in-out">NEWSLETTER</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="lg:col-span-3 md:col-span-4 text-center lg:text-justify">
+                <h5 class="tracking-[8px] text-yellow-400 font-semibold">Importants Links</h5>
+                <ul class="list-none mt-6">
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-gray-400 transition-all direction-500 ease-in-out">Terms of services</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-gray-400 transition-all direction-500 ease-in-out"> Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-gray-300 hover:text-gray-400 transition-all direction-500 ease-in-out">Documentation</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="lg:col-span-3 md:col-span-4 text-center lg:text-justify">
+                <h5 class="tracking-[8px] text-yellow-400 font-semibold">Newsletter</h5>
+                  <p class="mt-6">Sign up and recive the latest tip via email</p>
+                  <form action="">
+                    <div class="grid grid-cols-1">
+                      <div class="my-3">
+                        <label for="" class="font-lable"> Write your email <span class="text-red-600">*</span></label>
+                        <div class="relative mt-2">
+                          <input type="email" class="w-full py-2 px-3 rounded h-10 outline-none bg-transparent rounded-t-sm rounded-r-none rounded-b-none rounded-l-sm outline-0 border border-gray-300/90 text-cyan-100 focus-within:shadow-none focus:border-gray-800/90 " placeholder="email" name="email" required>
+                        </div>
+                        <BUtton type="submit" id="submitsusbscribe" name="send" class="py-2 px-5 inline-block font-semibold tracking-wide border align-middle text-center bg-yellow-400 border-[#201914]  text-black rounded-lg hover:bg-sky-400">Subscribe</BUtton>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center py-7 px-0 border-t border-gray-800">
+      <div class="container mx-auto px-6">
+        <div class="text-center">
+          <p class="m-0 text-yellow-400"> &copy; Coding by Najeehat</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+  </script>
 </body>
+
 </html>
